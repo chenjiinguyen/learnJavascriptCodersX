@@ -1,22 +1,6 @@
 // Node Moudle
-
-function mouse(color){
-    this.color = color;
-    this.dead = false;
-}
-
-mouse.prototype.die = function(){
-    this.dead = true;
-} 
-
-function cat(){
-    this.stomach = [];
-}
-
-cat.prototype.eat = function(mouse){
-    this.stomach.push(mouse);
-    mouse.die();
-}
+var mouse = require('./mouse');
+var cat = require('./cat');
 
 var mickey = new mouse('black');
 var jerry = new mouse('yellow');
